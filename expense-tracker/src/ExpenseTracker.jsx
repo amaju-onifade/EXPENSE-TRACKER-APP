@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Wallet, X } from 'lucide-react'
 
 function ExpenseTracker() {
   const [expenses, setExpenses] = useState([])
@@ -23,7 +24,7 @@ function ExpenseTracker() {
 
   return (
     <div className="tracker">
-      <h1>💰 Expense Tracker</h1>
+      <h1><Wallet size={28} /> Student Expense Tracker by Amaju</h1>
       <div className="form">
         <input
           type="text"
@@ -51,7 +52,7 @@ function ExpenseTracker() {
             <span className="expense-name">{e.name}</span>
             <span className="expense-amount">₦{e.amount.toLocaleString()}</span>
             <button className="remove-btn" onClick={() => removeExpense(e.id)}>
-              ✕
+              <X size={16} />
             </button>
           </li>
         ))}
